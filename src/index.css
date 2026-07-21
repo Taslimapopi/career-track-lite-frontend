@@ -1,1 +1,41 @@
 @import "tailwindcss";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme {
+  --font-display: "Fraunces", serif;
+  --font-body: "Inter", sans-serif;
+
+  --color-primary: #0f6b66;
+  --color-primary-foreground: #ffffff;
+  --color-accent: #e8a33d;
+  --color-accent-foreground: #1b2430;
+  --color-danger: #e85d5d;
+
+  --color-background: #faf9f6;
+  --color-surface: #ffffff;
+  --color-ink: #1b2430;
+  --color-muted: #6b7280;
+  --color-border: #e5e5e0;
+}
+
+.dark {
+  --color-primary: #2dd4bf;
+  --color-primary-foreground: #052e2b;
+  --color-accent: #fbbf24;
+  --color-accent-foreground: #1b2430;
+  --color-danger: #f87171;
+
+  --color-background: #10151a;
+  --color-surface: #1a2129;
+  --color-ink: #f1f5f4;
+  --color-muted: #9ca3af;
+  --color-border: #2a333d;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-background);
+  color: var(--color-ink);
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
