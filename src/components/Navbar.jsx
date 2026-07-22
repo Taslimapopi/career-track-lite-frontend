@@ -20,31 +20,37 @@ const Navbar = () => {
         </Link>
 
         <div className="flex items-center gap-1 md:gap-2">
-          <Link
-            to="/"
-            className="text-sm text-muted hover:text-ink px-3 py-2 rounded-full hover:bg-background transition-colors hidden sm:block"
-          >
-            Home
-          </Link>
-          <Link
-            to="/dashboard"
-            className="text-sm text-muted hover:text-ink px-3 py-2 rounded-full hover:bg-background transition-colors"
-          >
-            Dashboard
-          </Link>
-          <Link
-            to="/applications"
-            className="text-sm text-muted hover:text-ink px-3 py-2 rounded-full hover:bg-background transition-colors"
-          >
-            Applications
-          </Link>
+          {user ? (
+            <>
+              <Link to="/dashboard" className="text-sm text-muted hover:text-ink px-3 py-2 rounded-full hover:bg-background transition-colors">
+                Dashboard
+              </Link>
+              <Link to="/applications" className="text-sm text-muted hover:text-ink px-3 py-2 rounded-full hover:bg-background transition-colors">
+                Applications
+              </Link>
+              <Link to="/job-match" className="text-sm text-muted hover:text-ink px-3 py-2 rounded-full hover:bg-background transition-colors">
+                AI Match
+              </Link>
 
-          <div className="w-px h-6 bg-border mx-1" />
+              <div className="w-px h-6 bg-border mx-1" />
 
-          <ThemeToggle />
-          <button onClick={handleLogout} className={buttonStyles("secondary")}>
-            Logout
-          </button>
+              <ThemeToggle />
+              <button onClick={handleLogout} className={buttonStyles("secondary")}>
+                Logout
+              </button>
+            </>
+          ) : (
+            <>
+              <div className="w-px h-6 bg-border mx-1" />
+              <ThemeToggle />
+              <Link to="/login" className="text-sm px-3 py-2">
+                Login
+              </Link>
+              <Link to="/register" className={buttonStyles("primary")}>
+                Get Started
+              </Link>
+            </>
+          )}
         </div>
       </div>
     </nav>

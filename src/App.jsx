@@ -10,6 +10,7 @@ import ApplicationForm from "./pages/ApplicationForm";
 import ApplicationsList from "./pages/ApplicationListPage";
 import NotFound from "./pages/NotFound";
 import { ThemeProvider } from "./context/ThemeContext";
+import JobMatchAnalyzer from "./pages/JobMatchAnalyzer";
 
 function App() {
   return (
@@ -54,6 +55,7 @@ function App() {
                     </ProtectedRoute>
                   }
                 />
+                <Route path="/job-match" element={<ProtectedRoute><JobMatchAnalyzer /></ProtectedRoute>} />
                 <Route path="*" element={<NotFound />} />
               </Routes>
             </div>

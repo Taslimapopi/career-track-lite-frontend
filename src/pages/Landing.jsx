@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
-import ThemeToggle from "../components/ThemeToggle";
+// import ThemeToggle from "../components/ThemeToggle";
+import Navbar from "../components/Navbar";
 
 const PIPELINE = ["Saved", "Applied", "Interview", "Offer"];
 
@@ -9,7 +10,7 @@ const Landing = () => {
 
   return (
     <div className="min-h-screen bg-background text-ink">
-      <nav className="flex justify-between items-center px-6 py-5 max-w-6xl mx-auto">
+      {/* <nav className="flex justify-between items-center px-6 py-5 max-w-6xl mx-auto">
         <span className="font-display text-xl font-semibold">CareerTrack Lite</span>
         <div className="flex items-center gap-3">
           <ThemeToggle />
@@ -34,7 +35,8 @@ const Landing = () => {
             </>
           )}
         </div>
-      </nav>
+      </nav> */}
+      <Navbar></Navbar>
 
       <main className="max-w-6xl mx-auto px-6">
         <section className="pt-16 pb-20 text-center">
