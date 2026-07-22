@@ -26,7 +26,7 @@ Built as a graded assignment demonstrating full-stack development, authenticatio
 Use the following account to log in and review the application without registering:
 
 ```
-Email:    asd@gmail.com
+Email:    taslimaapopi@gmail.com
 Password: 123456
 ```
 
